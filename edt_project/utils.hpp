@@ -1,6 +1,6 @@
 #pragma once
 
-#include "platform.h"
+#include "platform.hpp"
 
 inline double square(double x)
 {

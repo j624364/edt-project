@@ -1,7 +1,7 @@
 #pragma once
 
-#include "platform.h"
-#include "config.h"
+#include "platform.hpp"
+#include "config.hpp"
 
 #if !defined(KP)
 #error "KP not defined!"

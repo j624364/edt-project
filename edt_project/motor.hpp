@@ -1,6 +1,6 @@
 #pragma once
 
-#include "platform.h"
+#include "platform.hpp"
 
 #include <Servo.h>
 

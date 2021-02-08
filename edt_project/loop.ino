@@ -1,5 +1,5 @@
-#include "loop.h"
-#include "gyroscope.h"
+#include "loop.hpp"
+#include "gyroscope.hpp"
 
 float pidLoop(const float err, const float dt, float& integral)
 {

@@ -1,5 +1,5 @@
-#include "motor.h"
-#include "config.h"
+#include "motor.hpp"
+#include "config.hpp"
 
 void setupMotor(Servo& esc, const int servoPin)
 {

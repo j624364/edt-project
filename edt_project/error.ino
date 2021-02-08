@@ -1,6 +1,6 @@
-#include "error.h"
-#include "config.h"
-#include "array.h"
+#include "error.hpp"
+#include "config.hpp"
+#include "array.hpp"
 
 const char* g_Messages[] =
 {
