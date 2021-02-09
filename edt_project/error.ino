@@ -4,6 +4,8 @@
 
 // string messages lookup table
 
+// todo: move to progmem
+// when i figure out the syntax
 const char* g_Messages[] =
 {
 	"", // none
@@ -12,7 +14,7 @@ const char* g_Messages[] =
 	"OutOfBounds"
 };
 
-inline void reportError(size_t code)
+static void reportError(size_t code)
 {
 	assert(code < ErrorCode::End, ErrorCode::OutOfBounds);
 	Serial.println(g_Messages[code]);
