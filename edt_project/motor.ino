@@ -11,12 +11,18 @@ int GetMotorPin(size_t motorIndex)
 	return g_ServoPins[motorIndex];
 }
 
+Servo& GetMotor(size_t motorIndex)
+{
+	assert(motorIndex <= 4, ErrorCode::OutOfBounds);
+	return g_Servos[motorIndex];
+}
+
 void setupMotor(size_t motorIndex)
 {
 	assert(motorIndex <= 4, ErrorCode::OutOfBounds);
 
 	int pinNumber = GetMotorPin(motorIndex);
-	Servo& esc = g_Servos[motorIndex];
+	Servo& esc = GetESC(motorIndex);
 	
 	esc.attach(pinNumber);
 }
