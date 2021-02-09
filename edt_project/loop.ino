@@ -30,10 +30,19 @@ void updateEachAxis()
 	pidLoop(xErr, deltaTime, xIntegral, xPrevErr);
 	pidLoop(yErr, deltaTime, yIntegral, yPrevErr);
 	pidLoop(zErr, deltaTime, zIntegral, zPrevErr);
+
+	xPrevErr = xErr;
+	yPrevErr = yErr;
+	zPrevErr = zErr;
 }
 
 void updateMotors(gyroscope_data& gyroData)
 {
 	updateEachAxis();
+
+	float pitch = 0.0f;	// pitch is how far forward or backwards it is
+	float yaw = 0.0f;	// yaw is how far to the side it is
+	float roll = 0.0f;	// roll is sideways
+
 }
 
