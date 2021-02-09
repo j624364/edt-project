@@ -20,7 +20,7 @@ float pidLoop(const float err, const float dt, float& integral, float& previousE
 	return (KP * err) + (KI * integral) + (KD * derivative);
 }
 
-void updateEachAxis()
+void updateEachAxis(gyroscope_data& gyroData)
 {
 	static float lastTime = millis();
 	float currentTime = millis();
@@ -36,10 +36,8 @@ void updateEachAxis()
 	zPrevErr = zErr;
 }
 
-void updateMotors(gyroscope_data& gyroData)
+void updateMotors()
 {
-	updateEachAxis();
-
 	float pitch = 0.0f;	// pitch is how far forward or backwards it is
 	float yaw = 0.0f;	// yaw is how far to the side it is
 	float roll = 0.0f;	// roll is sideways
