@@ -18,8 +18,8 @@ Yes, the project structure is bad but so is the Arduino IDE so ¯\\_(ツ)_/¯.
 | Get gyro data                              | Done     |
 | Convert gyro data to output to esc         | WIP      |
 | Create fail safes                          | Not done |
-| Get receiver data                          |          |
-| Update gyro data to include receiver input |          |
+| Get receiver data                          | Not done |
+| Update gyro data to include receiver input | Not done |
 
 
 
