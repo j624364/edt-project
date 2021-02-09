@@ -1,5 +1,7 @@
 #pragma once
 
+#include "config.hpp"
+
 using u8 = unsigned char;
 using u16 = unsigned short;
 using u64 = unsigned long long;

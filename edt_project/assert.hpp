@@ -3,5 +3,5 @@
 #include "config.hpp"
 #include "error.hpp"
 
-void assert(bool condition, ErrorCode errorCode = ErrorCode::AssertionFailed);
+void assert(bool condition, size_t errorCode = ErrorCode::AssertionFailed);
 
