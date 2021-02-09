@@ -6,14 +6,14 @@
 
 Servo esc;
 
-constexpr int SERVOPIN { 11 };
-
 void droneInit()
 {
 	// setup systems
 
 	setupMPU();
-	setupMotor(esc, SERVOPIN);
+
+	for (size_t i = 0; i < 4; i++)
+		setupMotor(i);
 
 	// provide some delay before starting the main loop
 

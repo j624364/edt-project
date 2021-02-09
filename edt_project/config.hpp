@@ -31,3 +31,9 @@ static constexpr int DRONE_STARTUP_DELAY { 1000 };
 
 static constexpr float TIME_MULTIPLIER { 0.004f };
 
+// the pins the motors are connected to
+static constexpr int MotorOnePin { 11 };
+static constexpr int MotorTwoPin { 10 };
+static constexpr int MotorThreePin { 9 };
+static constexpr int MotorFourPin { 6 };
+

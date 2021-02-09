@@ -4,6 +4,7 @@
 
 #include <Servo.h>
 
-void setupMotor(Servo& esc, const int servoPin);
-void writeToMotor(const int motorPin, const float value);
+int GetMotorPin(size_t motorIndex);
+void setupMotor(size_t motorIndex);
+void writeToMotor(Servo& esc, const float value);
 
