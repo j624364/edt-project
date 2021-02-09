@@ -14,10 +14,7 @@ void droneInit()
 	pinMode(8, OUTPUT);
 	digitalWrite(8, HIGH);
 
-	if (!setupMPU())
-	{
-		throwError(ErrorCode::InvalidMPUSetup);
-	}
+	setupMPU();
 
 	setupMotor(esc, SERVOPIN);
 	delay(1000);

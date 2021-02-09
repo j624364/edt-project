@@ -20,7 +20,6 @@ void throwError(size_t code)
 
 	while (true)
 	{
-		
 		delay(ERROR_REPEAT_DELAY);
 	}
 }

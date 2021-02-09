@@ -4,8 +4,6 @@
 // so that the error message does not have
 // to be repeated
 
-#include "assert.h"
-
 // enum class not supported
 enum ErrorCode
 {

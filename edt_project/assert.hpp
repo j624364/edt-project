@@ -1,13 +1,7 @@
 #pragma once
 
-#include "config.h"
-#include "error.h"
+#include "config.hpp"
+#include "error.hpp"
 
-#if defined(DEBUG)
-// if debug mode, then check the condition
-#define ASSERT(condition) if (!(condition)) throwError(errorCode::AssertionFailed);
-#else
-// if in release/distribution, then ignore
-#define ASSERT(condition)
-#endif
+void assert(bool condition, ErrorCode errorCode = ErrorCode::AssertionFailed);
 

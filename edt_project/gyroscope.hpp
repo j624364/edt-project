@@ -4,13 +4,11 @@
 
 struct gyroscope_data
 {
-	float x;
-	float y;
-	float z;
+	float x = 0.0f;
+	float y = 0.0f;
+	float z = 0.0f;
 };
 
-typedef gyroscope_data gyro_data_t;
-
-bool setupMPU();
-gyro_data_t readIMUValues();
+void setupMPU();
+void readIMUValues(gyroscope_data& gyroData);
 
