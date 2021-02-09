@@ -14,7 +14,7 @@ const char* g_Messages[] =
 
 inline void reportError(size_t code)
 {
-	assert(code < ErrorCode::End);
+	assert(code < ErrorCode::End, ErrorCode::OutOfBounds);
 	Serial.println(g_Messages[code]);
 }
 
