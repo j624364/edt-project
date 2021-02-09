@@ -2,17 +2,6 @@
 
 #include "config.hpp"
 
-using u8 = unsigned char;
-using u16 = unsigned short;
-using u64 = unsigned long long;
-
-using i8 = char;
-using i16 = short;
-using i64 = long long;
-
-using f32 = float;
-using f64 = double;
-
 struct gyroscope_data;
 class Servo;
 
