@@ -10,12 +10,6 @@ constexpr int SERVOPIN { 11 };
 
 void droneInit()
 {
-	// write test signal to check program is working
-
-	pinMode(3, OUTPUT);
-	pinMode(8, OUTPUT);
-	digitalWrite(8, HIGH);
-
 	// setup systems
 
 	setupMPU();
@@ -28,19 +22,5 @@ void droneInit()
 
 void droneLoop()
 {
-	size_t milliseconds = millis();
-
-	if (digitalRead(2) == HIGH)
-	{
-		analogWrite(3, 0);
-		analogWrite(5, 0);
-	}
-	else
-	{
-		double blue = square(sin(milliseconds * TIME_MULTIPLIER));
-		double red  = square(cos(milliseconds * TIME_MULTIPLIER));
-		analogWrite(3, ledAnalogMap(blue));
-		analogWrite(5, ledAnalogMap(red));
-	}
 }
 
