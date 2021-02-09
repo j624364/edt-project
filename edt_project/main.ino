@@ -23,7 +23,7 @@ void droneInit()
 
 	// provide some delay before starting the main loop
 
-	delay(DRONE_STARTUP_DELAY);
+	delay(DRONE_STARTUP_DELAY - millis());
 }
 
 void droneLoop()
