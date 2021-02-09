@@ -6,7 +6,7 @@
 
 Servo esc;
 
-#define SERVOPIN 11
+constexpr int SERVOPIN { 11 };
 
 void droneInit()
 {

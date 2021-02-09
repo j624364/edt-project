@@ -10,24 +10,24 @@
 #define DEBUG
 
 // main PID values
-#define KP 1
-#define KI 1
-#define KD 1
+static constexpr float KP { 1.0 };
+static constexpr float KI { 1.0 };
+static constexpr float KD { 1.0 };
 
 // max and min values of the escs
 // NOTE: you may need to set the minimum
 // 	 higher than the default value to
 // 	 still get some thrust
-#define MAXMOTORVALUE 2000
-#define MINMOTORVALUE 1000
+static constexpr int MAXMOTORVALUE { 2000 };
+static constexpr int MINMOTORVALUE { 2000 };
 
 // amount of times between each time an error should be
 // reported
-#define ERROR_REPEAT_DELAY 1000
+static constexpr int ERROR_REPEAT_DELAY { 1000 };
 
 // amount of milliseconds taken for the drone to wait
 // before attempting to fly
-#define DRONE_STARTUP_DELAY 10000
+static constexpr int DRONE_STARTUP_DELAY { 1000 };
 
 static constexpr float TIME_MULTIPLIER { 0.004f };
 
