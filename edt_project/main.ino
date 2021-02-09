@@ -22,5 +22,10 @@ void droneInit()
 
 void droneLoop()
 {
+	gyroscope_data gyroData;
+
+	readIMUValues(gyroData);
+	updateEachAxis(gyroData);
+
 }
 
