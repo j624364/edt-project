@@ -9,6 +9,7 @@ const char* g_Messages[] =
 	"", // none
 	"AssertionFailed",
 	"Invalid MPU Setup",
+	"OutOfBounds"
 };
 
 inline void reportError(size_t code)

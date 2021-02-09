@@ -10,6 +10,7 @@ enum ErrorCode
 	None,
 	AssertionFailed,
 	InvalidMPUSetup,
+	OutOfBounds,
 
 	End
 };
