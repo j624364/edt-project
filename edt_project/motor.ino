@@ -17,17 +17,17 @@ Servo& GetMotor(size_t motorIndex)
 	return g_Servos[motorIndex];
 }
 
-void setupMotor(size_t motorIndex)
+void SetupMotor(size_t motorIndex)
 {
 	assert(motorIndex <= 4, ErrorCode::OutOfBounds);
 
 	int pinNumber = GetMotorPin(motorIndex);
-	Servo& esc = GetESC(motorIndex);
+	Servo& esc = GetMotor(motorIndex);
 	
 	esc.attach(pinNumber);
 }
 
-void writeToMotor(Servo& esc, const float value)
+void WriteToMotor(Servo& esc, const float value)
 {
 	int mappedValue = (value * (MAXMOTORVALUE - MINMOTORVALUE)) + MINMOTORVALUE;
 	esc.writeMicroseconds(mappedValue);

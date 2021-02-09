@@ -15,5 +15,5 @@ enum ErrorCode
 	End
 };
 
-void throwError(size_t code);
+void ThrowError(size_t code);
 

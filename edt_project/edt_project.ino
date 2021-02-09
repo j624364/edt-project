@@ -2,11 +2,11 @@
 
 void setup()
 {
-	droneInit();
+	DroneInit();
 }
 
 void loop()
 {
-	droneLoop();
+	DroneLoop();
 }
 

@@ -6,30 +6,30 @@
 
 Servo esc;
 
-void droneInit()
+void DroneInit()
 {
 	// setup systems
 
-	setupMPU();
+	SetupMPU();
 
 	for (size_t i = 0; i < 4; i++)
-		setupMotor(i);
+		SetupMotor(i);
 
 	// provide some delay before starting the main loop
 
 	delay(DRONE_STARTUP_DELAY - millis());
 }
 
-void droneLoop()
+void DroneLoop()
 {
 	// read data
 	gyroscope_data gyroData;
-	readIMUValues(gyroData);
+	ReadIMUValues(gyroData);
 
 	// update logic
-	updateEachAxis(gyroData);
+	UpdateEachAxis(gyroData);
 
 	// update the signal given to the motors
-	updateMotors();
+	UpdateMotors();
 }
 

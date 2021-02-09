@@ -9,6 +9,6 @@ struct gyroscope_data
 	float z = 0.0f;
 };
 
-void setupMPU();
-void readIMUValues(gyroscope_data& gyroData);
+void SetupMPU();
+void ReadIMUValues(gyroscope_data& gyroData);
 

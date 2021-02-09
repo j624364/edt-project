@@ -10,7 +10,7 @@ void assert(bool condition, size_t errorCode)
 
 	if (!condition)
 	{
-		throwError(errorCode);
+		ThrowError(errorCode);
 	}
 
 #else

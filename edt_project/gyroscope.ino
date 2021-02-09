@@ -7,7 +7,7 @@
 
 Adafruit_MPU6050 mpu;
 
-void setupMPU()
+void SetupMPU()
 {
 	bool mpuState = !mpu.begin();
 	assert(mpuState, ErrorCode::InvalidMPUSetup);
@@ -17,7 +17,7 @@ void setupMPU()
 	mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
 }
 
-void readIMUValues(gyroscope_data& gyroData)
+void ReadIMUValues(gyroscope_data& gyroData)
 {
 	sensors_event_t a, g, temp;
 	mpu.getEvent(&a, &g, &temp);

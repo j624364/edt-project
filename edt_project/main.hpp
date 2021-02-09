@@ -1,5 +1,5 @@
 #include "platform.hpp"
 
-void droneInit();
-void droneLoop();
+void DroneInit();
+void DroneLoop();
 

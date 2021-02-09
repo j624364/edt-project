@@ -20,7 +20,7 @@ static void reportError(size_t code)
 	Serial.println(g_Messages[code]);
 }
 
-void throwError(size_t code)
+void ThrowError(size_t code)
 {
 	
 	// check if not null assertion
