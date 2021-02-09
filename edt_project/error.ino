@@ -33,7 +33,7 @@ void ThrowError(size_t code)
 	while (true)
 	{
 		reportError(code);
-		delay(ERROR_REPEAT_DELAY);
+		delay(ErrorRepeatDelay);
 	}
 }
 

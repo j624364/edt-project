@@ -18,18 +18,16 @@ static constexpr float KD { 1.0 };
 // NOTE: you may need to set the minimum
 // 	 higher than the default value to
 // 	 still get some thrust
-static constexpr int MAXMOTORVALUE { 2000 };
-static constexpr int MINMOTORVALUE { 2000 };
+static constexpr int MaxMotorValue { 2000 };
+static constexpr int MinMotorValue { 2000 };
 
-// amount of times between each time an error should be
-// reported
-static constexpr int ERROR_REPEAT_DELAY { 1000 };
+// amount of times between each time an error should be reported
+// (in milliseconds)
+static constexpr int ErrorRepeatDelay { 1000 };
 
 // amount of milliseconds taken for the drone to wait
 // before attempting to fly
-static constexpr int DRONE_STARTUP_DELAY { 1000 };
-
-static constexpr float TIME_MULTIPLIER { 0.004f };
+static constexpr int DroneStartupDelay { 1000 };
 
 // the pins the motors are connected to
 static constexpr int MotorOnePin { 11 };

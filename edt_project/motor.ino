@@ -29,7 +29,7 @@ void SetupMotor(size_t motorIndex)
 
 void WriteToMotor(Servo& esc, const float value)
 {
-	int mappedValue = (value * (MAXMOTORVALUE - MINMOTORVALUE)) + MINMOTORVALUE;
+	int mappedValue = (value * (MaxMotorValue - MinMotorValue)) + MinMotorValue;
 	esc.writeMicroseconds(mappedValue);
 }
 
