@@ -10,17 +10,21 @@ Servo esc;
 
 void droneInit()
 {
+	// write test signal to check program is working
+
 	pinMode(3, OUTPUT);
 	pinMode(8, OUTPUT);
 	digitalWrite(8, HIGH);
 
+	// setup systems
+
 	setupMPU();
-
 	setupMotor(esc, SERVOPIN);
-	delay(1000);
-}
 
-#define TIME_MULTIPLIER 0.004f
+	// provide some delay before starting the main loop
+
+	delay(DRONE_STARTUP_DELAY);
+}
 
 void droneLoop()
 {

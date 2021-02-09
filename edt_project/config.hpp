@@ -29,3 +29,5 @@
 // before attempting to fly
 #define DRONE_STARTUP_DELAY 10000
 
+static constexpr float TIME_MULTIPLIER { 0.004f };
+
