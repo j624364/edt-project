@@ -2,6 +2,8 @@
 
 // Custom array class to store data
 
+#include "assert.hpp"
+
 #define NODISCARD [[nodiscard]]
 
 template <typename T, size_t size>
@@ -29,15 +31,17 @@ public:
 
 	NODISCARD const T& At(size_t index) const
 	{
+		assert(index < size, ErrorCode::OutOfBounds);
 		return *m_Data[index];
 	}
 
 	NODISCARD T& At(size_t index)
 	{
+		assert(index < size, ErrorCode::OutOfBounds);
 		return *m_Data[index];
 	}
 
-	NODISCARD inline constexpr size_t Size()
+	NODISCARD static constexpr size_t Size()
 	{
 		return size;
 	}
