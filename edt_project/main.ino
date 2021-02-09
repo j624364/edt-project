@@ -22,10 +22,14 @@ void droneInit()
 
 void droneLoop()
 {
+	// read data
 	gyroscope_data gyroData;
-
 	readIMUValues(gyroData);
+
+	// update logic
 	updateEachAxis(gyroData);
 
+	// update the signal given to the motors
+	updateMotors();
 }
 
