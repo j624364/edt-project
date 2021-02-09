@@ -28,7 +28,7 @@ void droneInit()
 
 void droneLoop()
 {
-	unsigned long milliseconds = millis();
+	size_t milliseconds = millis();
 
 	if (digitalRead(2) == HIGH)
 	{
