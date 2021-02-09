@@ -10,7 +10,20 @@ Yes, the project structure is bad but so is the Arduino IDE so ¯\\_(ツ)_/¯.
 
 
 
-Libraries used:
+##### To do:
+
+| Task                                       | Status   |
+| ------------------------------------------ | -------- |
+| Create utilities                           | WIP      |
+| Get gyro data                              | Done     |
+| Convert gyro data to output to esc         | WIP      |
+| Create fail safes                          | Not done |
+| Get receiver data                          |          |
+| Update gyro data to include receiver input |          |
+
+
+
+##### Libraries used:
 
 - Adafruit_MPU6050
 - Adafruit_BusIO
