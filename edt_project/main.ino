@@ -1,7 +1,5 @@
 #include "drone.hpp"
 
-Servo esc;
-
 void DroneInit()
 {
 	// setup systems
