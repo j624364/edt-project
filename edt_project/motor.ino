@@ -1,6 +1,4 @@
-#include "motor.hpp"
-#include "assert.hpp"
-#include "config.hpp"
+#include "drone.hpp"
 
 const int g_ServoPins[4] PROGMEM = { MotorOnePin, MotorTwoPin, MotorThreePin, MotorFourPin };
 Servo g_Servos[4];

@@ -1,5 +1,4 @@
-#include "loop.hpp"
-#include "gyroscope.hpp"
+#include "drone.hpp"
 
 float xErr = 0.0f;
 float yErr = 0.0f;

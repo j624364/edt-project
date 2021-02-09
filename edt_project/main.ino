@@ -1,8 +1,4 @@
-#include "utils.hpp"
-#include "motor.hpp"
-#include "gyroscope.hpp"
-#include "loop.hpp"
-#include "error.hpp"
+#include "drone.hpp"
 
 Servo esc;
 

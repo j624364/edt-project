@@ -1,6 +1,4 @@
-#include "error.hpp"
-#include "config.hpp"
-#include "array.hpp"
+#include "drone.hpp"
 
 // string messages lookup table
 
