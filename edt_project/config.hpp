@@ -21,6 +21,9 @@ static constexpr float KD { 1.0 };
 static constexpr int MaxMotorValue { 2000 };
 static constexpr int MinMotorValue { 2000 };
 
+static constexpr int DroppingMechanismOpenValue { 2000 };
+static constexpr int DroppingMechanismCloseValue { 0 };
+
 // amount of times between each time an error should be reported
 // (in milliseconds)
 static constexpr int ErrorRepeatDelay { 1000 };
@@ -34,4 +37,6 @@ static constexpr int MotorOnePin { 11 };
 static constexpr int MotorTwoPin { 10 };
 static constexpr int MotorThreePin { 9 };
 static constexpr int MotorFourPin { 6 };
+
+static constexpr int DroppingMechanismPin { 5 };
 
