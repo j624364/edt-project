@@ -1,6 +1,6 @@
 #include "drone.hpp"
 
-bool g_IsRunning = true;
+bool g_DroneRunning = true;
 
 void DroneInit()
 {
