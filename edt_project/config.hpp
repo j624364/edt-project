@@ -40,3 +40,5 @@ static constexpr int MotorFourPin { 6 };
 
 static constexpr int DroppingMechanismPin { 5 };
 
+static constexpr int ShutdownPin { 8 };
+

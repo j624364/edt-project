@@ -31,6 +31,8 @@ void DroneLoop()
 
 	// update the signal given to the motors
 	UpdateMotors();
+
+	attachInterrupt(digitalPinToInterrupt(ShutdownPin), &StopDrone, RISING);
 }
 
 void StopDrone()
