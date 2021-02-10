@@ -10,7 +10,7 @@ The source files are in edt_project/
 | Create fail safes                             | Not done |
 | Get receiver data                             | Not done |
 | Update gyro data to include receiver input    | Not done |
-| Control the servos for the dropping mechanism | Not done |
+| Control the servos for the dropping mechanism | Done     |
 
 ##### Opening the project:
 
