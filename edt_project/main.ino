@@ -23,8 +23,11 @@ void DroneLoop()
 		return;
 
 	// read data
-	gyroscope_data gyroData;
+	axis_data gyroData;
+	axis_data receiverData;
+
 	ReadIMUValues(gyroData);
+	ReadReceiver(receiverData);
 
 	// update logic
 	UpdateEachAxis(gyroData);

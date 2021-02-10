@@ -24,6 +24,8 @@ static constexpr int MinMotorValue { 1000 };
 static constexpr int DroppingMechanismOpenValue { 2000 };
 static constexpr int DroppingMechanismCloseValue { 0000 };
 
+static constexpr float MaxAnalogValue { 1024.0 };
+
 // amount of times between each time an error should be reported
 // (in milliseconds)
 static constexpr int ErrorRepeatDelay { 1000 };
@@ -41,4 +43,8 @@ static constexpr int MotorFourPin { 6 };
 static constexpr int DroppingMechanismPin { 5 };
 
 static constexpr int ShutdownPin { 8 };
+
+static constexpr int ReceiverPitchPin { A0 };
+static constexpr int ReceiverYawPin { A1 };
+static constexpr int ReceiverRollPin { A2 };
 

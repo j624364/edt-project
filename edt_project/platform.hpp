@@ -2,6 +2,6 @@
 
 #include "config.hpp"
 
-struct gyroscope_data;
+struct axis_data;
 class Servo;
 

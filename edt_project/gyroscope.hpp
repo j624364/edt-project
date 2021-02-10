@@ -2,7 +2,7 @@
 
 #include "platform.hpp"
 
-struct gyroscope_data
+struct axis_data
 {
 	float x = 0.0f;
 	float y = 0.0f;
@@ -10,5 +10,5 @@ struct gyroscope_data
 };
 
 void SetupMPU();
-void ReadIMUValues(gyroscope_data& gyroData);
+void ReadIMUValues(axis_data& gyroData);
 

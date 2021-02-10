@@ -20,7 +20,7 @@ float pidLoop(const float err, const float dt, float& integral, float& previousE
 	return (KP * err) + (KI * integral) + (KD * derivative);
 }
 
-void UpdateEachAxis(const gyroscope_data& gyroData)
+void UpdateEachAxis(const axis_data& gyroData)
 {
 	// get time since last calculation
 	static float lastTime = millis();
