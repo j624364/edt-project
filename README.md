@@ -5,7 +5,6 @@ The source files are in edt_project/
 
 | Task                                       | Status   |
 | ------------------------------------------ | -------- |
-| Create utilities                           | WIP      |
 | Get gyro data                              | Done     |
 | Convert gyro data to output to esc         | WIP      |
 | Create fail safes                          | Not done |
@@ -14,9 +13,9 @@ The source files are in edt_project/
 
 ##### Opening the project:
 
-- Open one of the .ino files
-- Download the libraries
-- Upload to the Arduino
+- Open one of the .ino files.
+- Download the libraries.
+- Upload to the Arduino.
 
 ##### Libraries used:
 
