@@ -10,19 +10,19 @@
 #define DEBUG
 
 // main PID values
-static constexpr float KP { 1.0 };
-static constexpr float KI { 1.0 };
-static constexpr float KD { 1.0 };
+static constexpr float KP { 1.0f };
+static constexpr float KI { 1.0f };
+static constexpr float KD { 1.0f };
 
 // max and min values of the escs
 // NOTE: you may need to set the minimum
 // 	 higher than the default value to
 // 	 still get some thrust
 static constexpr int MaxMotorValue { 2000 };
-static constexpr int MinMotorValue { 2000 };
+static constexpr int MinMotorValue { 1000 };
 
 static constexpr int DroppingMechanismOpenValue { 2000 };
-static constexpr int DroppingMechanismCloseValue { 0 };
+static constexpr int DroppingMechanismCloseValue { 0000 };
 
 // amount of times between each time an error should be reported
 // (in milliseconds)
