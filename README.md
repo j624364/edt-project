@@ -8,7 +8,7 @@ The source files are in edt_project/
 | Get gyro data                                 | Done     |
 | Convert gyro data to output to esc            | WIP      |
 | Create fail safes                             | Not done |
-| Get receiver data                             | Not done |
+| Get receiver data                             | Done     |
 | Update gyro data to include receiver input    | Not done |
 | Control the servos for the dropping mechanism | Done     |
 
