@@ -15,6 +15,8 @@ const char* g_Messages[] =
 static void reportError(size_t code)
 {
 	assert(code < ErrorCode::End, ErrorCode::OutOfBounds);
+
+	// write the error message to the serial port
 	Serial.println(g_Messages[code]);
 }
 

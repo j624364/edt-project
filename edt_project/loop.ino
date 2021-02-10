@@ -14,6 +14,7 @@ float zIntegral = 0.0f;
 
 float pidLoop(const float err, const float dt, float& integral, float& previousErr)
 {
+	// usual pid loop calculation
 	integral = integral + (err * dt);
 	float derivative = (err - previousErr) / dt;
 	return (KP * err) + (KI * integral) + (KD * derivative);
@@ -21,15 +22,18 @@ float pidLoop(const float err, const float dt, float& integral, float& previousE
 
 void UpdateEachAxis(const gyroscope_data& gyroData)
 {
+	// get time since last calculation
 	static float lastTime = millis();
 	float currentTime = millis();
 	float deltaTime = lastTime - currentTime;
 	lastTime = currentTime;
 
+	// calculate the pid loop for each axis
 	pidLoop(xErr, deltaTime, xIntegral, xPrevErr);
 	pidLoop(yErr, deltaTime, yIntegral, yPrevErr);
 	pidLoop(zErr, deltaTime, zIntegral, zPrevErr);
 
+	// move all current values to be the last values
 	xPrevErr = xErr;
 	yPrevErr = yErr;
 	zPrevErr = zErr;
