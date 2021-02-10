@@ -1,14 +1,5 @@
 # edt-project
-Source code for the EDT Project Drone.
-
-
-
 The source files are in edt_project/
-To open the project in the Arduino Editor, just open one of the .ino files
-
-Yes, the project structure is bad but so is the Arduino IDE so ¯\\_(ツ)_/¯.
-
-
 
 ##### To do:
 
@@ -21,7 +12,11 @@ Yes, the project structure is bad but so is the Arduino IDE so ¯\\_(ツ)_/¯.
 | Get receiver data                          | Not done |
 | Update gyro data to include receiver input | Not done |
 
+##### Opening the project:
 
+- Open one of the .ino files
+- Download the libraries
+- Upload to the Arduino
 
 ##### Libraries used:
 
@@ -31,3 +26,8 @@ Yes, the project structure is bad but so is the Arduino IDE so ¯\\_(ツ)_/¯.
 - SPI
 - Adafruit_Unified_Sensor
 - Servo
+
+##### Style Note:
+
+- Yes, I know the structure is bad, but the Arduino IDE struggles with complex projects.
+- I have tried to use as modern C++ as possible, but that is difficult when there is no standard library.
