@@ -14,6 +14,10 @@ void DroneInit()
 
 	// provide some delay before starting the main loop
 	delay(DroneStartupDelay - millis());
+
+	// attach an interupt to the shutdown pin
+	// when the pin is triggered, run the StopDrone function
+	attachInterrupt(digitalPinToInterrupt(ShutdownPin), &StopDrone, RISING);
 }
 
 void DroneLoop()
@@ -34,10 +38,6 @@ void DroneLoop()
 
 	// update the signal given to the motors
 	UpdateMotors();
-
-	// attach an interupt to the shutdown pin
-	// when the pin is triggered, run the StopDrone function
-	attachInterrupt(digitalPinToInterrupt(ShutdownPin), &StopDrone, RISING);
 }
 
 void StopDrone()
