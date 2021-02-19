@@ -2,6 +2,7 @@
 
 #include "platform.hpp"
 #include "utils.hpp"
+#include "main.hpp"
 #include "motor.hpp"
 #include "gyroscope.hpp"
 #include "loop.hpp"
@@ -9,4 +10,3 @@
 #include "error.hpp"
 #include "dropping_mechanism.hpp"
 #include "receiver.hpp"
-

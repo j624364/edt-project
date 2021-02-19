@@ -1,4 +1,5 @@
 #include "drone.hpp"
+#include "main.hpp"
 
 // this file is hard to get to in vim
 // so the code is in main.ino
