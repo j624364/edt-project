@@ -1,15 +1,19 @@
 #include "drone.hpp"
 
 // string messages lookup table
+// stored in program memory
 
-// todo: move to progmem
-// when i figure out the syntax
-const char* g_Messages[] =
+const char g_BlankMessage[] PROGMEM = "";
+const char g_AssertionFailedMessage[] PROGMEM = "";
+const char g_InvalidMPUSetupMessage[] PROGMEM = "";
+const char g_OutOfBoundsMessage[] PROGMEM = "";
+
+const char* const g_Messages[] PROGMEM =
 {
-	"", // none
-	"AssertionFailed",
-	"Invalid MPU Setup",
-	"OutOfBounds"
+	g_BlankMessage,
+	g_AssertionFailedMessage,
+	g_InvalidMPUSetupMessage,
+	g_OutOfBoundsMessage
 };
 
 static void reportError(size_t code)
