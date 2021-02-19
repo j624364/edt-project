@@ -27,6 +27,8 @@ void ThrowError(size_t code)
 	if (code == ErrorCode::None)
 		return;
 
+	droneExit();
+
 	// must enter an infinite cycle,
 	// to block further code execution
 
