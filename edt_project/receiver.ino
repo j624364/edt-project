@@ -13,4 +13,3 @@ void ReadReceiver(axis_data& remoteControllerData)
 	remoteControllerData.x = readAxis(ReceiverYawPin);
 	remoteControllerData.y = readAxis(ReceiverRollPin);
 }
-

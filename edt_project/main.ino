@@ -50,4 +50,3 @@ void droneExit()
 {
 	// add closing logic here
 }
-

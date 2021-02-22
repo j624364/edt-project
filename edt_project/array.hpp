@@ -50,4 +50,3 @@ private:
 	T m_Data[size];
 
 };
-

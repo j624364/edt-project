@@ -42,4 +42,3 @@ void ThrowError(size_t code)
 		delay(ErrorRepeatDelay);
 	}
 }
-

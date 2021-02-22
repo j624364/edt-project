@@ -16,4 +16,3 @@ enum ErrorCode
 };
 
 void ThrowError(size_t code);
-

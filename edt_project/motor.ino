@@ -41,4 +41,3 @@ void WriteToMotor(Servo& esc, const float value)
 	// write the value to the motor
 	esc.writeMicroseconds(mappedValue);
 }
-

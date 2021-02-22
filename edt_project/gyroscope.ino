@@ -30,4 +30,3 @@ void ReadIMUValues(axis_data& gyroData)
 	gyroData.y = g.gyro.y;
 	gyroData.z = g.gyro.z;
 }
-

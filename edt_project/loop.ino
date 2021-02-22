@@ -46,4 +46,3 @@ void UpdateMotors()
 	float roll = 0.0f;	// roll is sideways
 
 }
-

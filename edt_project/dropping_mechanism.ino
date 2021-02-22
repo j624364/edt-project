@@ -16,4 +16,3 @@ void CloseDroppingMechanism()
 {
 	g_DroppingMechanismServo.writeMicroseconds(DroppingMechanismCloseValue);
 }
-

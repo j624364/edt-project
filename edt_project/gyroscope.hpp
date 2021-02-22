@@ -11,4 +11,3 @@ struct axis_data
 
 void SetupMPU();
 void ReadIMUValues(axis_data& gyroData);
-

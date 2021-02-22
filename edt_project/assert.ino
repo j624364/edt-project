@@ -21,4 +21,3 @@ void assert(bool condition, size_t errorCode)
 #endif
 
 }
-
