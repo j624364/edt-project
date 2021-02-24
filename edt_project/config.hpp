@@ -40,10 +40,14 @@ static constexpr int MotorTwoPin { 10 };
 static constexpr int MotorThreePin { 9 };
 static constexpr int MotorFourPin { 6 };
 
+// pin for the dropping mechanism servo
 static constexpr int DroppingMechanismPin { 5 };
 
+// pin for shutting down the drone. when it is activated
+// the arduino will shutdown safely
 static constexpr int ShutdownPin { 8 };
 
+// pins for the receiver
 static constexpr int ReceiverPitchPin { A0 };
 static constexpr int ReceiverYawPin { A1 };
 static constexpr int ReceiverRollPin { A2 };
