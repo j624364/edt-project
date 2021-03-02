@@ -8,7 +8,7 @@ float xIntegral = 0.0f;
 float yIntegral = 0.0f;
 float zIntegral = 0.0f;
 
-float pidLoop(const float err, const float dt, float& integral, float& previousErr)
+float pidLoop(const float err, const float dt, float& integral, float previousErr)
 {
 	// usual pid loop calculation
 	integral = integral + (err * dt);
