@@ -3,14 +3,15 @@ The source files are in edt_project/
 
 ##### To do:
 
-| Task                                          | Status |
-| --------------------------------------------- | ------ |
-| Get gyro data                                 | Done   |
-| Convert gyro data to output to esc            | Done   |
-| Create fail safes                             | WIP    |
-| Get receiver data                             | Done   |
-| Update gyro data to include receiver input    | Done   |
-| Control the servos for the dropping mechanism | Done   |
+| Task                                          | Status   |
+| --------------------------------------------- | -------- |
+| Get gyro data                                 | Done     |
+| Convert gyro data to output to esc            | Done     |
+| Create fail safes                             | WIP      |
+| Get receiver data                             | Done     |
+| Update gyro data to include receiver input    | Done     |
+| Control the servos for the dropping mechanism | Done     |
+| Control dropping mechanism with remote        | Not done |
 
 ##### Opening the project:
 
