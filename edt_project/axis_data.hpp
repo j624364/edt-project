@@ -6,3 +6,6 @@ struct axis_data
 	float y = -1.0f;
 	float z = -1.0f;
 };
+
+// subtracts src from dest
+axis_data SubtractAxisData(const axis_data& dat1, const axis_data& dat2);
