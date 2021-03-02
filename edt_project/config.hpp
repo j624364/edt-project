@@ -14,6 +14,9 @@ static constexpr float KP { 1.0f };
 static constexpr float KI { 1.0f };
 static constexpr float KD { 1.0f };
 
+// this value is multiplied to the pitch and roll
+static constexpr float ThrustMultiplier { 1.0f };
+
 // max and min values of the escs
 // NOTE: you may need to set the minimum
 // 	 higher than the default value to

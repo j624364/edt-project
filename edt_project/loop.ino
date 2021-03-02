@@ -1,9 +1,5 @@
 #include "drone.hpp"
 
-float xErr = 0.0f;
-float yErr = 0.0f;
-float zErr = 0.0f;
-
 float xPrevErr = 0.0f;
 float yPrevErr = 0.0f;
 float zPrevErr = 0.0f;
@@ -20,7 +16,7 @@ float pidLoop(const float err, const float dt, float& integral, float& previousE
 	return (KP * err) + (KI * integral) + (KD * derivative);
 }
 
-void UpdateEachAxis(const axis_data& gyroData)
+void UpdateEachAxis(const axis_data& target, const axis_data& current, axis_data& pidData)
 {
 	// get time since last calculation
 	static float lastTime = millis();
@@ -28,10 +24,14 @@ void UpdateEachAxis(const axis_data& gyroData)
 	float deltaTime = lastTime - currentTime;
 	lastTime = currentTime;
 
+	float xErr = target.x - current.x;
+	float yErr = target.y - current.y;
+	float zErr = target.z - current.z;
+
 	// calculate the pid loop for each axis
-	pidLoop(xErr, deltaTime, xIntegral, xPrevErr);
-	pidLoop(yErr, deltaTime, yIntegral, yPrevErr);
-	pidLoop(zErr, deltaTime, zIntegral, zPrevErr);
+	pidData.x = pidLoop(xErr, deltaTime, xIntegral, xPrevErr);
+	pidData.y = pidLoop(yErr, deltaTime, yIntegral, yPrevErr);
+	pidData.z = pidLoop(zErr, deltaTime, zIntegral, zPrevErr);
 
 	// move all current values to be the last values
 	xPrevErr = xErr;
@@ -39,10 +39,36 @@ void UpdateEachAxis(const axis_data& gyroData)
 	zPrevErr = zErr;
 }
 
-void UpdateMotors()
+static void updateAxis(float thrust,
+	float& p1Thrust, float& p2Thrust, float& n1Thrust, float& n2Thrust)
 {
-	float pitch = 0.0f;	// pitch is how far forward or backwards it is
-	float yaw = 0.0f;	// yaw is how far to the side it is
-	float roll = 0.0f;	// roll is sideways
+	p1Thrust += thrust;
+	p2Thrust += thrust;
+	n1Thrust += thrust;
+	n2Thrust += thrust;
+}
 
+void UpdateMotors(const axis_data& pidData)
+{
+	// find the thrust values using trigonometry
+	float pitchThrust = tan(pidData.y) * ThrustMultiplier;
+	float rollThrust = tan(pidData.y) * ThrustMultiplier;
+	float yawThrust = tan(pidData.z);
+
+	// these are the values of thrust each motor receives
+	float wThrust = 0.0f;
+	float xThrust = 0.0f;
+	float yThrust = 0.0f;
+	float zThrust = 0.0f;
+
+	// update the individual motors, with the previously calculated thrusts
+	updateAxis(pitchThrust, xThrust, yThrust, zThrust, wThrust);
+	updateAxis(rollThrust, xThrust, zThrust, yThrust, wThrust);
+	updateAxis(yawThrust, zThrust, wThrust, yThrust, zThrust);
+
+	// write to each motor value
+	WriteToMotor(GetMotor(1), xThrust);
+	WriteToMotor(GetMotor(2), yThrust);
+	WriteToMotor(GetMotor(3), zThrust);
+	WriteToMotor(GetMotor(4), wThrust);
 }

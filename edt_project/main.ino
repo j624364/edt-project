@@ -28,16 +28,17 @@ void DroneLoop()
 	// reserve room for data
 	axis_data gyroData;
 	axis_data receiverData;
+	axis_data pidData;
 
 	// read the data
 	ReadIMUValues(gyroData);
 	ReadReceiver(receiverData);
 
 	// update logic
-	UpdateEachAxis(gyroData);
+	UpdateEachAxis(receiverData, gyroData, pidData);
 
 	// update the signal given to the motors
-	UpdateMotors();
+	UpdateMotors(pidData);
 }
 
 void StopDrone()
