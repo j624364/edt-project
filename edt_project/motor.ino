@@ -33,8 +33,11 @@ void SetupMotor(size_t motorIndex)
 	esc.attach(pinNumber);
 }
 
-void WriteToMotor(Servo& esc, const float value)
+void WriteToMotor(size_t motorIndex, const float value)
 {
+	// fetch the motor object
+	Servo& esc = GetMotor(motorIndex);
+
 	// map the value from 0.0-1.0 to MinMotorValue-MaxMotorValue
 	int mappedValue = (value * (MaxMotorValue - MinMotorValue)) + MinMotorValue;
 

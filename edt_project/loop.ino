@@ -67,8 +67,8 @@ void UpdateMotors(const axis_data& pidData)
 	updateAxis(yawThrust, zThrust, wThrust, yThrust, zThrust);
 
 	// write to each motor value
-	WriteToMotor(GetMotor(1), xThrust);
-	WriteToMotor(GetMotor(2), yThrust);
-	WriteToMotor(GetMotor(3), zThrust);
-	WriteToMotor(GetMotor(4), wThrust);
+	WriteToMotor(1, xThrust);
+	WriteToMotor(2, yThrust);
+	WriteToMotor(3, zThrust);
+	WriteToMotor(4, wThrust);
 }
