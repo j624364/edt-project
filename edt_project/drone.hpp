@@ -1,3 +1,5 @@
+#pragma once
+
 // contains all of the function definitions
 
 #include "axis_data.hpp"
