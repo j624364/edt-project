@@ -1,5 +1,3 @@
-#include "platform.hpp"
-
 #include <Servo.h>
 
 void SetupDroppingMechanism();

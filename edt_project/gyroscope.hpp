@@ -1,6 +1,5 @@
 #pragma once
 
-#include "platform.hpp"
 #include "axis_data.hpp"
 
 void SetupMPU();
