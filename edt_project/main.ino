@@ -6,7 +6,6 @@ void DroneInit()
 {
 	// setup systems
 	SetupMPU();
-	SetupDroppingMechanism();
 
 	// setup each four motors
 	for (size_t i = 0; i < 4; i++)
