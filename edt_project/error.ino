@@ -26,11 +26,6 @@ static void reportError(size_t code)
 
 void ThrowError(size_t code)
 {
-	
-	// check if not null assertion
-	if (code == ErrorCode::None)
-		return;
-
 	droneExit();
 
 	// must enter an infinite cycle,
