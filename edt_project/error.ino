@@ -26,7 +26,7 @@ static void reportError(size_t code)
 
 void ThrowError(size_t code)
 {
-	droneExit();
+	StopDrone();
 
 	// must enter an infinite cycle,
 	// to block further code execution

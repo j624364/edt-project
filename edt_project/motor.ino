@@ -44,3 +44,11 @@ void WriteToMotor(size_t motorIndex, const float value)
 	// write the value to the motor
 	esc.writeMicroseconds(mappedValue);
 }
+
+void MotorsExit()
+{
+	for (size_t i = 0; i < 4; i++)
+	{
+		WriteToMotor(i, MinMotorValue);
+	}
+}

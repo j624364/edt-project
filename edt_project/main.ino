@@ -40,13 +40,13 @@ void DroneLoop()
 	UpdateMotors(pidData);
 }
 
+static void droneExit()
+{
+	MotorsExit();
+}
+
 void StopDrone()
 {
 	g_DroneRunning = false;
 	droneExit();
-}
-
-void droneExit()
-{
-	// add closing logic here
 }
