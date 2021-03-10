@@ -13,3 +13,11 @@ void ReadReceiver(AxisData& remoteControllerData)
 	remoteControllerData.x = readAxis(ReceiverYawPin);
 	remoteControllerData.y = readAxis(ReceiverRollPin);
 }
+
+bool IsReceiverReceiving()
+{
+	AxisData tempData;
+	ReadReceiver(tempData);
+
+	return (tempData.x != 0) || (tempData.y != 0) || (tempData.z != 0);
+}
