@@ -2,8 +2,8 @@
 
 float readAxis(int pinNumber)
 {
-	int data = analogRead(pinNumber);
-	float floatData = static_cast<float>(data);
+	int intData = analogRead(pinNumber);
+	float floatData = static_cast<float>(intData);
 	return floatData / MaxAnalogValue;
 }
 
