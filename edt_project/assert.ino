@@ -21,3 +21,11 @@ void assert(bool condition, size_t errorCode)
 #endif
 
 }
+
+void check(bool condition, size_t errorCode)
+{
+	if (!condition)
+	{
+		ThrowError(errorCode);
+	}
+}

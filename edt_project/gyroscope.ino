@@ -11,7 +11,7 @@ void SetupMPU()
 {
 	// start the mou and get its state
 	bool mpuState = m_MPU.begin();
-	assert(mpuState, ErrorCode::InvalidMPUSetup);
+	check(mpuState, ErrorCode::InvalidMPUSetup);
 
 	// setup the properties of the mpu
 	m_MPU.setAccelerometerRange(MPU6050_RANGE_8_G);
