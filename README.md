@@ -11,7 +11,6 @@ The source files are in edt_project/
 | Get receiver data                             | Done     |
 | Update gyro data to include receiver input    | Done     |
 | Control the servos for the dropping mechanism | Done     |
-| Control dropping mechanism with remote        | Not done |
 
 ##### Opening the project:
 
