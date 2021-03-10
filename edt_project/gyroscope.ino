@@ -5,7 +5,7 @@
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 
-Adafruit_MPU6050 s_MPU;
+static Adafruit_MPU6050 s_MPU;
 
 void SetupMPU()
 {

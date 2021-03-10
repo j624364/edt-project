@@ -2,8 +2,8 @@
 
 // variables for this compilation unit
 
-const int g_ServoPins[4] PROGMEM = { MotorOnePin, MotorTwoPin, MotorThreePin, MotorFourPin };
-Servo g_Servos[4];
+static const int g_ServoPins[4] PROGMEM = { MotorOnePin, MotorTwoPin, MotorThreePin, MotorFourPin };
+static Servo g_Servos[4];
 
 // normal function definitions
 

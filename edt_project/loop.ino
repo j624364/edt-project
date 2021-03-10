@@ -1,12 +1,12 @@
 #include "drone.hpp"
 
-float xPrevErr = 0.0f;
-float yPrevErr = 0.0f;
-float zPrevErr = 0.0f;
+static float xPrevErr = 0.0f;
+static float yPrevErr = 0.0f;
+static float zPrevErr = 0.0f;
 
-float xIntegral = 0.0f;
-float yIntegral = 0.0f;
-float zIntegral = 0.0f;
+static float xIntegral = 0.0f;
+static float yIntegral = 0.0f;
+static float zIntegral = 0.0f;
 
 float pidLoop(const float err, const float dt, float& integral, float previousErr)
 {

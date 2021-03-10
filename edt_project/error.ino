@@ -3,12 +3,12 @@
 // string messages lookup table
 // stored in program memory
 
-const char g_BlankMessage[] PROGMEM = "An Error Occured!";
-const char g_AssertionFailedMessage[] PROGMEM = "Assertion Failed!";
-const char g_InvalidMPUSetupMessage[] PROGMEM = "Invalid MPU Setup!";
-const char g_OutOfBoundsMessage[] PROGMEM = "Out of Bounds!";
+static const char g_BlankMessage[] PROGMEM = "An Error Occured!";
+static const char g_AssertionFailedMessage[] PROGMEM = "Assertion Failed!";
+static const char g_InvalidMPUSetupMessage[] PROGMEM = "Invalid MPU Setup!";
+static const char g_OutOfBoundsMessage[] PROGMEM = "Out of Bounds!";
 
-const char* const g_Messages[] PROGMEM =
+static const char* const g_Messages[] PROGMEM =
 {
 	g_BlankMessage,
 	g_AssertionFailedMessage,
