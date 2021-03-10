@@ -19,7 +19,7 @@ void SetupMPU()
 	m_MPU.setFilterBandwidth(MPU6050_BAND_21_HZ);
 }
 
-void ReadIMUValues(axis_data& gyroData)
+void ReadIMUValues(AxisData& gyroData)
 {
 	// get the current data
 	sensors_event_t a, g, temp;

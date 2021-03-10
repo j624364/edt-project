@@ -7,7 +7,7 @@ float readAxis(int pinNumber)
 	return floatData / MaxAnalogValue;
 }
 
-void ReadReceiver(axis_data& remoteControllerData)
+void ReadReceiver(AxisData& remoteControllerData)
 {
 	remoteControllerData.z = readAxis(ReceiverPitchPin);
 	remoteControllerData.x = readAxis(ReceiverYawPin);

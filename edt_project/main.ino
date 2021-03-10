@@ -25,9 +25,9 @@ void DroneLoop()
 		return;
 
 	// reserve room for data
-	axis_data gyroData;
-	axis_data receiverData;
-	axis_data pidData;
+	AxisData gyroData;
+	AxisData receiverData;
+	AxisData pidData;
 
 	// read the data
 	ReadIMUValues(gyroData);

@@ -16,7 +16,7 @@ float pidLoop(const float err, const float dt, float& integral, float previousEr
 	return (KP * err) + (KI * integral) + (KD * derivative);
 }
 
-void UpdateEachAxis(const axis_data& target, const axis_data& current, axis_data& pidData)
+void UpdateEachAxis(const AxisData& target, const AxisData& current, AxisData& pidData)
 {
 	// get time since last calculation
 	static float lastTime = millis();
@@ -48,7 +48,7 @@ static void updateAxis(float thrust,
 	n2Thrust += thrust;
 }
 
-void UpdateMotors(const axis_data& pidData)
+void UpdateMotors(const AxisData& pidData)
 {
 	// find the thrust values using trigonometry
 	float pitchThrust = tan(pidData.y) * ThrustMultiplier;
