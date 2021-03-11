@@ -44,8 +44,8 @@ static void updateAxis(float thrust,
 {
 	p1Thrust += thrust;
 	p2Thrust += thrust;
-	n1Thrust += thrust;
-	n2Thrust += thrust;
+	n1Thrust -= thrust;
+	n2Thrust -= thrust;
 }
 
 void UpdateMotors(const AxisData& pidData)
