@@ -1,5 +1,7 @@
 #include "drone.hpp"
 
+static bool g_HasReceivedData = false;
+
 float readAxis(int pinNumber)
 {
 	int intData = analogRead(pinNumber);
@@ -14,13 +16,17 @@ void ReadReceiver(AxisData& remoteControllerData)
 	remoteControllerData.y = readAxis(ReceiverRollPin);
 }
 
-bool IsReceiverReceiving()
+bool CheckReceiver()
 {
+	if (g_HasReceivedData)
+		return g_HasReceivedData;
+
 	// read the current data
 	AxisData tempData;
 	ReadReceiver(tempData);
 
-	// assume that if all values are empty, then
-	// no data is being received
-	return (tempData.x != 0) || (tempData.y != 0) || (tempData.z != 0);
+	if (!IsAxisDataNull(tempData))
+		g_HasReceivedData = true;
+
+	return g_HasReceivedData;
 }

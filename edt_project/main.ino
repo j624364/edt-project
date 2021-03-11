@@ -1,6 +1,6 @@
 #include "drone.hpp"
 
-static bool g_DroneRunning = true;
+static bool s_DroneRunning = true;
 
 void DroneInit()
 {
@@ -21,7 +21,7 @@ void DroneInit()
 
 void DroneLoop()
 {
-	if (!g_DroneRunning)
+	if (!s_DroneRunning)
 		return;
 
 	// reserve room for data
@@ -32,6 +32,11 @@ void DroneLoop()
 	// read the data
 	ReadIMUValues(gyroData);
 	ReadReceiver(receiverData);
+
+	if (millis() > DroneCheckDelay)
+	{
+		check(CheckReceiver(), ErrorCode::NoReceiverData);
+	}
 
 	// update logic
 	UpdateEachAxis(receiverData, gyroData, pidData);
@@ -51,6 +56,6 @@ static void droneExit()
 // can be called multiple times
 void StopDrone()
 {
-	g_DroneRunning = false;
+	s_DroneRunning = false;
 	droneExit();
 }

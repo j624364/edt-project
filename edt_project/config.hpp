@@ -37,6 +37,10 @@ static constexpr int ErrorRepeatDelay { 1000 };
 // before attempting to fly
 static constexpr int DroneStartupDelay { 1000 };
 
+// amount of milliseconds before drone stops due to
+// no data received
+static constexpr int DroneCheckDelay { DroneStartupDelay + 1000 };
+
 // the pins the motors are connected to
 static constexpr int MotorOnePin { 11 };
 static constexpr int MotorTwoPin { 10 };

@@ -7,13 +7,15 @@ static const char g_BlankMessage[] PROGMEM = "An Error Occured!";
 static const char g_AssertionFailedMessage[] PROGMEM = "Assertion Failed!";
 static const char g_InvalidMPUSetupMessage[] PROGMEM = "Invalid MPU Setup!";
 static const char g_OutOfBoundsMessage[] PROGMEM = "Out of Bounds!";
+static const char g_NoReceiverData[] PROGMEM = "No Data Read by Receiver!";
 
 static const char* const g_Messages[] PROGMEM =
 {
 	g_BlankMessage,
 	g_AssertionFailedMessage,
 	g_InvalidMPUSetupMessage,
-	g_OutOfBoundsMessage
+	g_OutOfBoundsMessage,
+	g_NoReceiverData,
 };
 
 static void reportError(size_t code)

@@ -9,3 +9,4 @@ struct AxisData
 
 // subtracts src from dest
 AxisData SubtractAxisData(const AxisData& dat1, const AxisData& dat2);
+bool IsAxisDataNull(const AxisData& data);

@@ -9,3 +9,8 @@ AxisData SubtractAxisData(const AxisData& dat1, const AxisData& dat2)
 
     return outputData;
 }
+
+bool IsAxisDataNull(const AxisData& data)
+{
+    return (data.x != 0) && (data.y != 0) && (data.z != 0);
+}

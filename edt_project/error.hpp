@@ -11,6 +11,7 @@ enum ErrorCode
 	AssertionFailed,
 	InvalidMPUSetup,
 	OutOfBounds,
+	NoReceiverData,
 
 	End
 };
