@@ -56,6 +56,9 @@ static void droneExit()
 // can be called multiple times
 void StopDrone()
 {
-	s_DroneRunning = false;
+	if (!s_DroneRunning)
+		return;
+
 	droneExit();
+	s_DroneRunning = false;
 }
