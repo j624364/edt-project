@@ -40,11 +40,15 @@ void DroneLoop()
 	UpdateMotors(pidData);
 }
 
+// handle the drone exiting
+// should only be called once
+// managed by StopDrone()
 static void droneExit()
 {
 	MotorsExit();
 }
 
+// can be called multiple times
 void StopDrone()
 {
 	g_DroneRunning = false;

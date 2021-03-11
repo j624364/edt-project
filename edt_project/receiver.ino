@@ -16,8 +16,11 @@ void ReadReceiver(AxisData& remoteControllerData)
 
 bool IsReceiverReceiving()
 {
+	// read the current data
 	AxisData tempData;
 	ReadReceiver(tempData);
 
+	// assume that if all values are empty, then
+	// no data is being received
 	return (tempData.x != 0) || (tempData.y != 0) || (tempData.z != 0);
 }

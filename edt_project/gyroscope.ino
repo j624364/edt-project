@@ -9,11 +9,13 @@ static Adafruit_MPU6050 s_MPU;
 
 void SetupMPU()
 {
-	// start the mou and get its state
+	// start the mpu and get its state
 	bool mpuState = s_MPU.begin();
+	// always check as it is important to run
 	check(mpuState, ErrorCode::InvalidMPUSetup);
 
 	// setup the properties of the mpu
+	// use the most precise values
 	s_MPU.setAccelerometerRange(MPU6050_RANGE_8_G);
 	s_MPU.setGyroRange(MPU6050_RANGE_1000_DEG);
 	s_MPU.setFilterBandwidth(MPU6050_BAND_21_HZ);

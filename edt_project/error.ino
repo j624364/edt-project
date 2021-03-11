@@ -33,7 +33,11 @@ void ThrowError(size_t code)
 
 	while (true)
 	{
+		// report the error to serial
 		reportError(code);
+
+		// wait a the specified number of seconds
+		// to not be too annoying
 		delay(ErrorRepeatDelay);
 	}
 }
