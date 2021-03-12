@@ -54,6 +54,9 @@ static constexpr int DroppingMechanismPin { 5 };
 // the arduino will shutdown safely
 static constexpr int ShutdownPin { 8 };
 
+// pin for showing if there has been an error
+static constexpr int ErrorLEDPin { 7 };
+
 // pins for the receiver
 static constexpr int ReceiverPitchPin { A0 };
 static constexpr int ReceiverYawPin { A1 };

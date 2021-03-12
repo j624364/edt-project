@@ -30,6 +30,9 @@ void ThrowError(size_t code)
 {
 	StopDrone();
 
+	// write to the led pin
+	digitalWrite(ErrorLEDPin, HIGH);
+
 	// must enter an infinite cycle,
 	// to block further code execution
 
