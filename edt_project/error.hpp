@@ -12,6 +12,7 @@ enum ErrorCode
 	InvalidMPUSetup,
 	OutOfBounds,
 	NoReceiverData,
+	InvalidMotorIndex,
 
 	End
 };

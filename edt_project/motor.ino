@@ -9,19 +9,19 @@ static Servo g_Servos[4];
 
 int GetMotorPin(size_t motorIndex)
 {
-	assert(motorIndex <= 4, ErrorCode::OutOfBounds);
+	assert(motorIndex < 4, ErrorCode::InvalidMotorIndex);
 	return g_ServoPins[motorIndex];
 }
 
 Servo& GetMotor(size_t motorIndex)
 {
-	assert(motorIndex <= 4, ErrorCode::OutOfBounds);
+	assert(motorIndex < 4, ErrorCode::InvalidMotorIndex);
 	return g_Servos[motorIndex];
 }
 
 void SetupMotor(size_t motorIndex)
 {
-	assert(motorIndex <= 4, ErrorCode::OutOfBounds);
+	assert(motorIndex < 4, ErrorCode::InvalidMotorIndex);
 
 	// get the motor pin
 	int pinNumber = GetMotorPin(motorIndex);
@@ -35,6 +35,8 @@ void SetupMotor(size_t motorIndex)
 
 void WriteToMotor(size_t motorIndex, const float value)
 {
+	assert(motorIndex < 4, ErrorCode::InvalidMotorIndex);
+
 	// fetch the motor object
 	Servo& esc = GetMotor(motorIndex);
 
