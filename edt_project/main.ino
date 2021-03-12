@@ -33,6 +33,9 @@ void DroneLoop()
 	ReadIMUValues(gyroData);
 	ReadReceiver(receiverData);
 
+	// if the drone is past the startup limit,
+	// then check if the drone has received input
+	// if it has not, then throw an error
 	if (millis() > DroneCheckDelay)
 	{
 		check(CheckReceiver(), ErrorCode::NoReceiverData);
