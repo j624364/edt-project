@@ -2,7 +2,15 @@
 
 static bool g_HasReceivedData = false;
 
-float readAxis(int pinNumber)
+void SetupReceiver()
+{
+	pinMode(ReceiverPitchPin, INPUT);
+	pinMode(ReceiverYawPin, INPUT);
+	pinMode(ReceiverRollPin, INPUT);
+	pinMode(AuxiliaryPin, INPUT);
+}
+
+static float readAxis(int pinNumber)
 {
 	int intData = analogRead(pinNumber);
 	float floatData = static_cast<float>(intData);

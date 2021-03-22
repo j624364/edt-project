@@ -6,6 +6,7 @@ void DroneInit()
 {
 	// setup systems
 	SetupMPU();
+	SetupReceiver();
 
 	// setup each four motors
 	for (size_t i = 0; i < 4; i++)
@@ -13,6 +14,9 @@ void DroneInit()
 
 	// provide some delay before starting the main loop
 	delay(DroneStartupDelay - millis());
+
+	// turn off led pin if on
+	digitalWrite(ErrorLEDPin, LOW);
 
 	// attach an interupt to the shutdown pin
 	// when the pin is triggered, run the StopDrone function
