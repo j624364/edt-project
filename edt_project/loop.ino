@@ -1,12 +1,12 @@
 #include "drone.hpp"
 
-static float xPrevErr = 0.0f;
-static float yPrevErr = 0.0f;
-static float zPrevErr = 0.0f;
+static float s_xPrevErr = 0.0f;
+static float s_yPrevErr = 0.0f;
+static float s_zPrevErr = 0.0f;
 
-static float xIntegral = 0.0f;
-static float yIntegral = 0.0f;
-static float zIntegral = 0.0f;
+static float s_xIntegral = 0.0f;
+static float s_yIntegral = 0.0f;
+static float s_zIntegral = 0.0f;
 
 float pidLoop(const float err, const float dt, float& integral, float previousErr)
 {
@@ -29,14 +29,14 @@ void UpdateEachAxis(const AxisData& target, const AxisData& current, AxisData& p
 	float zErr = target.z - current.z;
 
 	// calculate the pid loop for each axis
-	pidData.x = pidLoop(xErr, deltaTime, xIntegral, xPrevErr);
-	pidData.y = pidLoop(yErr, deltaTime, yIntegral, yPrevErr);
-	pidData.z = pidLoop(zErr, deltaTime, zIntegral, zPrevErr);
+	pidData.x = pidLoop(xErr, deltaTime, s_xIntegral, s_xPrevErr);
+	pidData.y = pidLoop(yErr, deltaTime, s_yIntegral, s_yPrevErr);
+	pidData.z = pidLoop(zErr, deltaTime, s_zIntegral, s_zPrevErr);
 
 	// move all current values to be the last values
-	xPrevErr = xErr;
-	yPrevErr = yErr;
-	zPrevErr = zErr;
+	s_xPrevErr = xErr;
+	s_yPrevErr = yErr;
+	s_zPrevErr = zErr;
 }
 
 static void updateAxis(float thrust,
