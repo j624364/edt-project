@@ -27,9 +27,6 @@ static constexpr float TurnMultiplier { 1.0f };
 static constexpr int MaxMotorValue { 2000 };
 static constexpr int MinMotorValue { 1000 };
 
-static constexpr int DroppingMechanismOpenValue { 2000 };
-static constexpr int DroppingMechanismCloseValue { 0000 };
-
 static constexpr float MaxAnalogValue { 1024.0 };
 
 // amount of times between each time an error should be reported
@@ -49,9 +46,6 @@ static constexpr int MotorOnePin { 11 };
 static constexpr int MotorTwoPin { 10 };
 static constexpr int MotorThreePin { 9 };
 static constexpr int MotorFourPin { 6 };
-
-// pin for the dropping mechanism servo
-static constexpr int DroppingMechanismPin { 5 };
 
 // pin for shutting down the drone. when it is activated
 // the arduino will shutdown safely
