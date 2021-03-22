@@ -47,7 +47,7 @@ void UpdateMotors(const AxisData& pidData, float deltaTime)
 	// find the thrust values using trigonometry
 	float pitchThrust = tan(pidData.y) * ThrustMultiplier;
 	float rollThrust = tan(pidData.y) * ThrustMultiplier;
-	float yawThrust = tan(pidData.z);
+	float yawThrust = tan(pidData.z) * TurnMultiplier;
 
 	// these are the values of thrust each motor receives
 	float wThrust = 0.0f;
