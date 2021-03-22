@@ -64,3 +64,4 @@ static constexpr int ErrorLEDPin { 7 };
 static constexpr int ReceiverPitchPin { A0 };
 static constexpr int ReceiverYawPin { A1 };
 static constexpr int ReceiverRollPin { A2 };
+static constexpr int AuxiliaryPin { A3 };

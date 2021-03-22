@@ -42,7 +42,7 @@ static void updateAxis(float thrust,
 	n2Thrust -= thrust;
 }
 
-void UpdateMotors(const AxisData& pidData, float deltaTime)
+void UpdateMotors(const AxisData& pidData, float currentThrustMultiplier, float deltaTime)
 {
 	// find the thrust values using trigonometry
 	float pitchThrust = tan(pidData.y) * ThrustMultiplier;
@@ -59,6 +59,12 @@ void UpdateMotors(const AxisData& pidData, float deltaTime)
 	updateAxis(pitchThrust, xThrust, yThrust, zThrust, wThrust);
 	updateAxis(rollThrust, xThrust, zThrust, yThrust, wThrust);
 	updateAxis(yawThrust, zThrust, wThrust, yThrust, zThrust);
+
+	// mutlipy by thrust multiplier to gain / loose altitude
+	xThrust *= currentThrustMultiplier;
+	yThrust *= currentThrustMultiplier;
+	zThrust *= currentThrustMultiplier;
+	wThrust *= currentThrustMultiplier;
 
 	// write to each motor value
 	WriteToMotor(1, xThrust);

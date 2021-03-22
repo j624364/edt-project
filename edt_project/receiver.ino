@@ -16,6 +16,11 @@ void ReadReceiver(AxisData& remoteControllerData)
 	remoteControllerData.y = readAxis(ReceiverRollPin);
 }
 
+void ReadAux(float& auxData)
+{
+	auxData = readAxis(AuxiliaryPin);
+}
+
 bool CheckReceiver()
 {
 	if (g_HasReceivedData)

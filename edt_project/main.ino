@@ -34,10 +34,12 @@ void DroneLoop()
 	AxisData gyroData;
 	AxisData receiverData;
 	AxisData pidData;
+	float auxData;
 
 	// read the data
 	ReadIMUValues(gyroData);
 	ReadReceiver(receiverData);
+	ReadAux(auxData);
 
 	// if the drone is past the startup limit,
 	// then check if the drone has received input
@@ -51,7 +53,7 @@ void DroneLoop()
 	UpdateEachAxis(receiverData, gyroData, pidData, deltaTime);
 
 	// update the signal given to the motors
-	UpdateMotors(pidData, deltaTime);
+	UpdateMotors(pidData, auxData, deltaTime);
 }
 
 // handle the drone exiting
