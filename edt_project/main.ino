@@ -24,6 +24,12 @@ void DroneLoop()
 	if (!s_DroneRunning)
 		return;
 
+	// get time since last calculation
+	static float lastTime = millis();
+	float currentTime = millis();
+	float deltaTime = lastTime - currentTime;
+	lastTime = currentTime;
+
 	// reserve room for data
 	AxisData gyroData;
 	AxisData receiverData;
@@ -42,10 +48,10 @@ void DroneLoop()
 	}
 
 	// update logic
-	UpdateEachAxis(receiverData, gyroData, pidData);
+	UpdateEachAxis(receiverData, gyroData, pidData, deltaTime);
 
 	// update the signal given to the motors
-	UpdateMotors(pidData);
+	UpdateMotors(pidData, deltaTime);
 }
 
 // handle the drone exiting
