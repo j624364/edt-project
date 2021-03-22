@@ -16,6 +16,7 @@ void DroneInit()
 	delay(DroneStartupDelay - millis());
 
 	// turn off led pin if on
+	pinMode(ErrorLEDPin, OUTPUT);
 	digitalWrite(ErrorLEDPin, LOW);
 
 	// attach an interupt to the shutdown pin
