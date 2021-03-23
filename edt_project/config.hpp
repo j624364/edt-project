@@ -20,6 +20,10 @@ static constexpr float ThrustMultiplier { 1.0f };
 // this value is multiplied to the yaw
 static constexpr float TurnMultiplier { 1.0f };
 
+// this value is multiplied to the final thrust to account
+// for altitude gain or loss
+static constexpr float AltitudeMultiplier { 1.0f };
+
 // max and min values of the escs
 // NOTE: you may need to set the minimum
 // 	 higher than the default value to

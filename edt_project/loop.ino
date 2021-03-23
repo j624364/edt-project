@@ -61,10 +61,10 @@ void UpdateMotors(const AxisData& pidData, float currentThrustMultiplier, float 
 	updateAxis(yawThrust, zThrust, wThrust, yThrust, zThrust);
 
 	// mutlipy by thrust multiplier to gain / loose altitude
-	xThrust *= currentThrustMultiplier;
-	yThrust *= currentThrustMultiplier;
-	zThrust *= currentThrustMultiplier;
-	wThrust *= currentThrustMultiplier;
+	xThrust *= currentThrustMultiplier * AltitudeMultiplier;
+	yThrust *= currentThrustMultiplier * AltitudeMultiplier;
+	zThrust *= currentThrustMultiplier * AltitudeMultiplier;
+	wThrust *= currentThrustMultiplier * AltitudeMultiplier;
 
 	// write to each motor value
 	WriteToMotor(1, xThrust);
