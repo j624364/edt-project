@@ -12,9 +12,6 @@ void DroneInit()
 	for (size_t i = 0; i < 4; i++)
 		SetupMotor(i);
 
-	// provide some delay before starting the main loop
-	delay(DroneStartupDelay - millis());
-
 	// turn off led pin if on
 	pinMode(ErrorLEDPin, OUTPUT);
 	digitalWrite(ErrorLEDPin, LOW);
@@ -22,6 +19,9 @@ void DroneInit()
 	// attach an interupt to the shutdown pin
 	// when the pin is triggered, run the StopDrone function
 	attachInterrupt(digitalPinToInterrupt(ShutdownPin), &StopDrone, RISING);
+
+	// provide some delay before starting the main loop
+	delay(DroneStartupDelay - millis());
 }
 
 void DroneLoop()
