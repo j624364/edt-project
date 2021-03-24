@@ -30,8 +30,8 @@ void DroneLoop()
 		return;
 
 	// get time since last calculation
-	static float lastTime = millis();
-	float currentTime = millis();
+	static float lastTime = millis() / 1000.0f;
+	float currentTime = millis() / 1000.0f;
 	float deltaTime = lastTime - currentTime;
 	lastTime = currentTime;
 
