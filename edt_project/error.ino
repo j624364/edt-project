@@ -22,7 +22,7 @@ static const char* const g_Messages[] PROGMEM =
 
 static void reportError(size_t code)
 {
-	assert(code < ErrorCode::End, ErrorCode::OutOfBounds);
+	assert(code < static_cast<size_t>(ErrorCode::End), ErrorCode::OutOfBounds);
 
 	// write the error message to the serial port
 	Serial.println(g_Messages[code]);
