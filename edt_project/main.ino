@@ -46,13 +46,14 @@ void DroneLoop()
 	ReadReceiver(receiverData);
 	ReadAux(auxData);
 
-	// if the drone is past the startup limit,
-	// then check if the drone has received input
-	// if it has not, then throw an error
-	if (millis() > DroneCheckDelay)
-	{
+	// if the drone is not part the startup time,
+	// then check for data
+	// after the startup time, check if any data has
+	// been received in that time and if not throw an error
+	if (currentTime <= DroneCheckDelay)
+		CheckReceiver();
+	else if (currentTime > DroneCheckDelay)
 		check(CheckReceiver(), ErrorCode::NoReceiverData);
-	}
 
 	// update logic
 	UpdateEachAxis(receiverData, gyroData, pidData, deltaTime);
