@@ -2,5 +2,5 @@
 
 void SetupReceiver();
 void ReadReceiver(AxisData& remoteControllerData);
-void ReadAux(float& auxData);
+void ReadElevator(float& elevatorData);
 bool CheckReceiver();

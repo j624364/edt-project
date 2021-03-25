@@ -24,9 +24,9 @@ void ReadReceiver(AxisData& remoteControllerData)
 	remoteControllerData.y = readAxis(ReceiverRollPin);
 }
 
-void ReadAux(float& auxData)
+void ReadElevator(float& elevatorData)
 {
-	auxData = readAxis(AuxiliaryPin);
+	elevatorData = readAxis(AuxiliaryPin);
 }
 
 bool CheckReceiver()

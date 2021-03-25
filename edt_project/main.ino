@@ -39,12 +39,12 @@ void DroneLoop()
 	AxisData gyroData;
 	AxisData receiverData;
 	AxisData pidData;
-	float auxData;
+	float elevatorData;
 
 	// read the data
 	ReadIMUValues(gyroData);
 	ReadReceiver(receiverData);
-	ReadAux(auxData);
+	ReadElevator(elevatorData);
 
 	// if the drone is not part the startup time,
 	// then check for data
@@ -59,7 +59,7 @@ void DroneLoop()
 	UpdateEachAxis(receiverData, gyroData, pidData, deltaTime);
 
 	// update the signal given to the motors
-	UpdateMotors(pidData, auxData, deltaTime);
+	UpdateMotors(pidData, elevatorData, deltaTime);
 }
 
 // handle the drone exiting
