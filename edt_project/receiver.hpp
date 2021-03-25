@@ -2,5 +2,5 @@
 
 void SetupReceiver();
 void ReadReceiver(AxisData& remoteControllerData);
-void ReadElevator(float& elevatorData);
+void ReadThrottle(float& throttleData);
 bool CheckReceiver();

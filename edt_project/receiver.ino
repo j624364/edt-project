@@ -7,7 +7,7 @@ void SetupReceiver()
 	pinMode(ReceiverPitchPin, INPUT);
 	pinMode(ReceiverYawPin, INPUT);
 	pinMode(ReceiverRollPin, INPUT);
-	pinMode(AuxiliaryPin, INPUT);
+	pinMode(ThrottlePin, INPUT);
 }
 
 static float readAxis(int pinNumber)
@@ -24,9 +24,9 @@ void ReadReceiver(AxisData& remoteControllerData)
 	remoteControllerData.y = readAxis(ReceiverRollPin);
 }
 
-void ReadElevator(float& elevatorData)
+void ReadThrottle(float& throttleData)
 {
-	elevatorData = readAxis(AuxiliaryPin);
+	throttleData = readAxis(ThrottlePin);
 }
 
 bool CheckReceiver()
